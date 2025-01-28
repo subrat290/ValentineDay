@@ -12,22 +12,19 @@ function moveButton(button) {
 
 
 window.onload = () => {
-    const button = document.getElementById('random'); // Assuming your button's ID is 'random'
+    const button = document.getElementById('random'); 
 
     if (button) {
-        // Set the button's position to absolute if not already set
         button.style.position = 'absolute';
 
-        // Initially position the button
         moveButton(button);
 
-        // Add mouseover event to move the button when hovered
         button.addEventListener('mouseover', () => moveButton(button));
     } else {
         console.error("Button with ID 'random' not found.");
     }
 };
-// Generate confetti pieces
+
 document.addEventListener('DOMContentLoaded', () => {
   const confettiWrapper = document.querySelector('.confetti-wrapper');
 
@@ -35,11 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
 
-    // Randomize confetti position
     confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.animationDuration = Math.random() * 4 + 8 + 's'; // Between 3-5 seconds
-    confetti.style.animationDelay = Math.random() * 2 + 's'; // Random delay
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`; // Random colors
+    confetti.style.animationDuration = Math.random() * 4 + 8 + 's'; 
+    confetti.style.animationDelay = Math.random() * 2 + 's'; 
+    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`; 
 
     confettiWrapper.appendChild(confetti);
   }
