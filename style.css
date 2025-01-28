@@ -1,0 +1,136 @@
+*{
+	box-sizing: border-box;
+	font-family: serif;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightcyan;
+}
+.main{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+.main .tenor-gif-embed{
+	max-width: 20rem;
+
+}
+.main .button{
+	display: flex;
+	gap: 25px;
+
+}
+
+}
+.nav	{
+	color: indianred;
+}
+.main .tenor-gif-embed{
+	max-width: 20rem;
+
+}
+.button a {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px lightpink;
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px lightpink;
+    }
+}
+
+/* for animated background */
+body {
+    animation: gradient 10s infinite; 
+    background: linear-gradient(90deg, lightpink, lightcyan, lavender); 
+    background-size: 400% 400%; 
+    margin: 0;
+    font-family: Arial, sans-serif; 
+}
+
+/* to animate gradient */
+@keyframes gradient {
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+}
+
+
+.button a {
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+  padding: 10px 25px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; 
+}
+
+
+.button a:first-child:hover {
+  background-color: lightgreen; 
+  color: white;
+  transform: scale(1.1); 
+  box-shadow: 0.8rem 1.5rem 4rem rgba(0, 128, 0, 0.4); 
+}
+
+
+.button a:last-child:hover {
+  background-color: lightcoral; 
+  color: white; 
+  transform: scale(1.1); 
+  box-shadow: 0.8rem 1.5rem 4rem rgba(255, 0, 0, 0.4); 
+}
+/*here starts*/
+/* Confetti container */
+.confetti-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Individual confetti pieces */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Random colors for confetti */
+.confetti:nth-child(odd) {
+  background: blue;
+}
+
+.confetti:nth-child(even) {
+  background: yellow;
+}
+
+/* Falling animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
